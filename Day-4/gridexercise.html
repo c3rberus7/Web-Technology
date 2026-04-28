@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Layout example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+        }
+
+        .box {
+            border: 4px solid #2196f3;
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .header {
+            grid-column: 1 / 4;
+        }
+
+        .menu {
+            grid-row: 2 / 4;
+        }
+
+        .main {
+            grid-column: 2 / 3;
+        }
+
+        .right {
+            grid-column: 3 / 4;
+        }
+
+        .footer {
+            grid-column: 2 / 4;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>CSS Grid Layout example</h2>
+
+<div class="grid-container">
+
+    <div class="box header">Header</div>
+
+    <div class="box menu">Menu</div>
+    <div class="box main">Main</div>
+    <div class="box right">Right</div>
+
+    <div class="box footer">Footer</div>
+
+</div>
+
+</body>
+</html>

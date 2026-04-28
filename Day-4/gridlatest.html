@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+         body{
+        background-color: aqua;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 40px;
+    }
+     h1{
+            margin-top: 50px;
+        }
+        .grid-container{
+             display: grid;
+            background-color: aliceblue;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 100px 100px;
+            grid-auto-rows: 250px;
+            gap: 15px;
+            border: 4px dotted red;
+            padding: 20px;
+        }
+        .item{
+            background-color: aqua;
+            border: 4px dotted red;
+            padding: 30px;
+            text-align: center;
+            margin-top: 10px;
+        }
+</style>
+<body>
+    <h1>Explicit and implicit grid</h1>
+    <h2>Explicit Grid</h2>
+    <p>thse explicit going to perform the fit into pre defined grid row and grid column</p>
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">item 7(implicit)</div>
+                <div class="item">item 8(implicit)</div>
+                        <div class="item">item 9(implicit)</div>
+    </div>
+</body>
+</html>
