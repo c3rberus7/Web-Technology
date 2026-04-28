@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML + CSS + JS</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial;
+            background: linear-gradient(135deg,#0f0f0f,#282828,#3f3f3f);
+            color:white;
+            text-align:center;
+        }
+
+        header{
+            background:black;
+            padding:15px;
+        }
+
+        nav a{
+            color:white;
+            margin:10px;
+            text-decoration:none;
+            padding:6px 12px;
+            border-radius:20px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:gold;
+            color:black;
+        }
+
+        .box{
+            margin-top:50px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            border-radius:20px;
+            background:gold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>My Website</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="box">
+    <h1 id="title">Welcome</h1>
+    <p id="text">Click buttons to see JavaScript actions</p>
+
+    <!-- INLINE JS -->
+    <button onclick="alert('Hello! This is Inline JavaScript')">
+        Inline JS
+    </button>
+
+    <!-- INTERNAL JS -->
+    <button onclick="changeText()">
+        Change Text
+    </button>
+
+    <!-- INTERNAL JS -->
+    <button onclick="changeColor()">
+        Change Background
+    </button>
+</div>
+
+<!-- INTERNAL JAVASCRIPT -->
+<script>
+function changeText(){
+    document.getElementById("text").innerHTML = "Text changed using JavaScript!";
+}
+
+function changeColor(){
+    document.body.style.background = "linear-gradient(135deg, #ff512f, #dd2476)";
+}
+</script>
+
+</body>
+</html>

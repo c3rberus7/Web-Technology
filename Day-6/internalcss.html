@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS-EX-1</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #eef2f7;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    background: #4a90e2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inline { background: #c8f7c5; }
+.internal { background: #b3d9ff; }
+.external { background: #ffb3b3; }
+
+.js-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background: orange;
+    color: white;
+    cursor: pointer;
+}
+</style>
+
+<script>
+// Internal JS
+function showInternal() {
+    alert("Internal CSS Example Clicked!");
+}
+
+function innerHTMLDemo() {
+    document.getElementById("output").innerHTML = "Output using innerHTML!";
+}
+
+function writeDemo() {
+    document.write("Output using document.write()");
+}
+
+function alertDemo() {
+    alert("This is alert()");
+}
+
+function consoleDemo() {
+    console.log("This is console.log()");
+    alert("Check console!");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>JS-EX-1</h1>
+
+<h3>3 Ways (External, Internal, Inline)</h3>
+
+<!-- Inline JS -->
+<button class="btn inline" onclick="alert('Inline CSS Example Clicked!')">
+    Inline CSS Example
+</button>
+
+<!-- Internal JS -->
+<button class="btn internal" onclick="showInternal()">
+    Internal CSS Example
+</button>
+
+<!-- External JS simulation -->
+<button class="btn external" onclick="externalFunction()">
+    External CSS Example
+</button>
+
+<h3>4 JavaScript Output Methods</h3>
+<p id="output">Output will display here</p>
+
+<button class="js-btn" onclick="innerHTMLDemo()">innerHTML</button>
+<button class="js-btn" onclick="writeDemo()">document.write()</button>
+<button class="js-btn" onclick="alertDemo()">alert()</button>
+<button class="js-btn" onclick="consoleDemo()">console.log()</button>
+
+<h3>3 JavaScript Types</h3>
+
+<button class="js-btn" onclick="alert('Inline JS Executed!')">Inline JS</button>
+<button class="js-btn" onclick="showInternal()">Internal JS</button>
+<button class="js-btn" onclick="externalFunction()">External JS</button>
+
+</div>
+
+<!-- External JS -->
+<script>
+function externalFunction() {
+    alert("External JS Executed!");
+}
+</script>
+
+</body>
+</html>

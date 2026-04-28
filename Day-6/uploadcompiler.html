@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Display Possibilities</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            background-color: blue;
+            color: black;
+            padding: 10px;
+        }
+        img{
+            width: 400px;
+            height: 250px;
+        }
+        button{
+            margin: 5px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title1">What can do Js</h1>
+
+<h2 id="text1">What can do Js</h2>
+
+<img id="myImage" src="https://uploads.onecompiler.io/44madyd29/44mkb8e4d/monarch-butterfly-grass.avif" alt="Butterfly">
+
+<br>
+
+<button onclick="changeText()">Change Me</button>
+<button onclick="changeImage()">Change Image</button>
+
+<p id="info">Hide info visible</p>
+<button onclick="hideInfo()">Hide</button>
+
+<h1>JavaScript Display Possibilities</h1>
+
+<h2 id="text2">What can do Js</h2>
+
+<button onclick="changeSecondText()">Change Me</button>
+<button onclick="clickMe()">Click Me</button>
+
+<script>
+function changeText() {
+    document.getElementById("text1").innerHTML = "JavaScript can change text!";
+}
+
+function changeImage() {
+    document.getElementById("myImage").src = "https://uploads.onecompiler.io/44madyd29/44mkb8e4d/images.jpg";
+}
+
+function hideInfo() {
+    document.getElementById("info").style.display = "none";
+}
+
+function changeSecondText() {
+    document.getElementById("text2").innerHTML = "Text Changed Successfully!";
+}
+
+function clickMe() {
+    alert("Button Clicked!");
+}
+</script>
+
+</body>
+</html>
