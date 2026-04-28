@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Z-Index Layout</title>
+
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .Box {
+            width: 150px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            background-color: aqua;
+            font-weight: bold;
+            position: absolute; /* important for layering */
+        }
+
+        .b1 {
+            background-color: beige;
+            top: 20px;
+            left: 20px;
+            z-index: 13;
+        }
+
+        .b2 {
+            background-color: rgb(93, 218, 93);
+            top: 40px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .b3 {
+            background-color: rgb(152, 139, 225);
+            top: 60px;
+            left: 80px;
+            z-index: 10;
+        }
+
+        .b4 {
+            background-color: rgb(226, 226, 94);
+            top: 80px;
+            left: 120px;
+            z-index: 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>INTRO FOR Z INDEX</h2>
+    <h3>Layering Example</h3>
+
+    <div class="container">
+        <div class="Box b1">Zindex 1</div>
+        <div class="Box b2">Zindex 2</div>
+        <div class="Box b3">Zindex 3</div>
+        <div class="Box b4">Zindex 4</div>
+    </div>
+
+</body>
+</html>

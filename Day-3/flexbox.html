@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day 5 - Flexbox Output</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f4f8; padding: 20px; color: #333; }
+        h1 { text-align: center; color: #1e88e5; }
+        h2 { border-bottom: 2px solid #ccc; padding-top: 20px; font-size: 1.2rem; }
+        h3 { font-size: 0.9rem; color: #666; margin-bottom: 5px; }
+
+        .container {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex; /* This is the magic trigger */
+        }
+
+        .item {
+            background-color: #64b5f6;
+            color: white;
+            padding: 15px;
+            margin: 5px;
+            border: 1px solid #1e88e5;
+            text-align: center;
+            min-width: 40px;
+        }
+
+        /* Flex Direction Sections */
+        .dir-row { flex-direction: row; }
+        .dir-col { flex-direction: column; width: fit-content; }
+
+        /* Flex Wrap Sections */
+        .wrap-yes { flex-wrap: wrap; }
+        .wrap-no { flex-wrap: nowrap; overflow-x: auto; }
+
+        /* Alignment Sections */
+        .justify-center { justify-content: center; }
+        .align-center { align-items: center; height: 100px; }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Day 5 - Flexbox</h1>
+
+    <h2>1. Flex Container & Items</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h2>2. Flex Direction</h2>
+    <h3>Row (Default)</h3>
+    <div class="container dir-row">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+    <h3>Column</h3>
+    <div class="container dir-col">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+
+    <h2>3. Flex Wrap</h2>
+    <h3>Wrap</h3>
+    <div class="container wrap-yes" style="width: 200px;">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+    </div>
+    <h3>No Wrap</h3>
+    <div class="container wrap-no" style="width: 200px;">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+    </div>
+
+    <h2>4. Alignment</h2>
+    <h3>Justify Content (Main Axis: Center)</h3>
+    <div class="container justify-center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+    <h3>Align Items (Cross Axis: Center)</h3>
+    <div class="container align-center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    </div>
+
+</body>
+</html>

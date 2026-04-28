@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: antiquewhite;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: bold;
+        padding: 40px;
+    }
+    h1{
+        margin-top: 10px;
+        text-align: center;
+        border: 2px solid red;
+    }
+    .flex-containerrow{
+        display: flex;
+        justify-content: space-around;
+        justify-content: space-between;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 4px solid blue;
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: azure;
+    }
+    .b1{
+        border: 4px dotted rgb(0,255,183);
+        padding: 30px;
+        background-color: rgb(14, 122, 216);
+    }
+    .b2{
+        border: 4px dotted rgb(0,255,183);
+        padding: 30px;
+        background-color: rgb(15, 129, 228);
+    }
+    .b3{
+        border: 4px dotted rgb(0,255,183);
+        padding: 30px;
+        background-color: rgb(26, 142, 243);
+    }
+    .item{
+        width: 100px;
+        height: 60px;
+        background-color: aqua;
+        border:5px dashed brown;
+        text-align: center;
+        line-height: 60px;
+        font-weight: solid;
+         padding: 30px;
+    }
+    .flex-containercolumn{
+        flex-direction: column;
+        height: 1000px;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        justify-content: space-evenly;
+        display: flex;
+        padding: 30px;
+        background-color: green;
+    }
+    .item1{
+        width: 100px;
+        height: 60px;
+        background-color: aqua;
+        border:5px dashed brown;
+        text-align: center;
+        line-height: 60px;
+        font-weight: solid;
+         padding: 40px;
+         justify-content: space-around;
+         margin: 30px;
+    }
+    .container{
+        display: flex;
+        border: dashed rgb(235, 17, 180);
+        padding: 10px;
+        gap: 45px;
+    }
+    .nested{
+        background-color: aquamarine;
+        border: 4px solid black;
+        margin: 40px;
+        padding: 15px;
+        width: 40px;
+        display: flex;
+    }
+    .it{
+        width: 2000px;
+        display: flex;
+        height: auto;
+        background-color: aliceblue;
+        text-align: center;
+        line-height: 10px;
+        font-weight: bold;
+    }
+    .c{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        border: 4px solid black;
+        padding: 10px;
+    }
+    .ma{
+        background-color: aqua;
+        text-align: center;
+        border:  4px solid black;
+        flex: 1;
+    }
+    .ma-item2{
+        background-color: aqua;
+        text-align: center;
+        flex: 3;
+    }
+    .ma-item3{
+        align-self: flex-end;
+        background-color: aqua;
+        flex: 7;
+    }
+</style>
+<h1>flexbox layout</h1>
+<h2>row direction(default)</h2>
+<div class="flex-containerrow">
+    <div class="b1">Box1</div>
+    <div class="b2">Box2</div>
+    <div class="b3">Box3</div>
+    <div>Box4</div>
+</div>
+<h2>column direction</h2>
+<div class="flex-containercolumn">
+    <div class="item1">Box1</div>
+    <div class="item">Box2</div>
+    <div class="item">Box3</div>
+    <div class="item">Box4</div>
+    </div>
+    <h3>Nested heading</h3>
+    <div class="container">
+        <div class="it">Box1</div>
+         <div class="it">Box2</div>
+         <div class="nested">Nested</div>
+         <div class="nested">Nested</div>
+         <div class="nested">Nested</div>
+         <div class="nested">Nested</div>
+          <div class="it">Box3</div>
+    </div>
+    <H3>flex item</H3>
+    <dic class="c">
+        <div class="ma">item 1</div>
+        <div class="ma-item2">item 2 (flex2)/div>
+        <div class="ma-item3">item 3</div>
+        <div class="ma-item2">item 2 (flex2)/div>
+        <div class="ma-item3">item 3</div>
+    </dic>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Website</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background: #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .sidebar {
+            float: left;
+            width: 20%;
+            background-color: bisque;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .con {
+            float: left;
+            width: 70%;
+            background: rgb(253, 253, 124);
+            padding: 20px;
+            height: 300px;
+            overflow: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+            position: relative; /* IMPORTANT for absolute box */
+        }
+
+        .floating-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            text-align: center;
+            line-height: 80px;
+            border: 1px solid black;
+        }
+
+        .row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .debug {
+            background-color: aqua;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: rgb(19, 18, 18);
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Education</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+    <div class="row">
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <p>Menu1</p>
+            <p>Menu2</p>
+            <p>Menu3</p>
+            <p>Menu4</p>
+        </aside>
+
+        <section class="con">
+            <h2>Main Info Profile</h2>
+
+            <div class="floating-box">Box</div>
+
+            <p>
+                This is information about student DB overflow.
+                Add more text to scroll.<br><br>
+
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.<br>
+                This is information about student DB overflow.
+            </p>
+        </section>
+
+    </div>
+</div>
+
+<footer class="debug">
+    <p>©2026 My Page</p>
+</footer>
+
+</body>
+</html>
