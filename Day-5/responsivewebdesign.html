@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+</head>
+<style>
+     body{
+        margin: 0px; 
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(93,232,232);
+        }
+        header{
+            background-color: beige;
+            text-align: center;
+            color: black;
+            padding: 10px;
+        }
+        .container{
+            width: 90%;
+            margin: 20px auto;
+        }
+        .card{
+            background-color: aquamarine;
+            border: 8px double pink;
+            text-align: center;
+            font-weight: bold;
+        }
+        img{
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        footer{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 20px;
+        }
+        @media(min-width:768px){
+            .cards{
+            grid-template-columns: repeat(2,1fr);
+            }
+        }
+         @media(min-width:1024px){
+            .cards{
+            grid-template-columns: repeat(3,1fr);
+            }
+            header{
+                text-align: left;
+                padding: 20px 40px;
+            }
+        }
+         @media(min-width:90px){
+            .cards{
+            grid-template-columns: repeat(1,1fr);
+            }
+        }
+</style>
+<body>
+    <header>
+    <h1>Responsive Web Design(RWD)</h1>
+    <p>Adapting Screen to every device(mobile,laptop,desktop,tablet)</p>
+    </header>
+    <main class="container">
+        <section class="cards">
+            <div class="cards">
+              content flows gracefully
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google image">
+            </div>
+               <div class="cards">
+             REach all user easily
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Amazon_2024.svg" alt="Amazon image">
+            </div>
+            <div class="cards">
+              USER FRIENDLY NAVIGATION
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft image">
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

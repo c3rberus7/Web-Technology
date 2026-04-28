@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Demo</title>
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TEXT SELECTION */
+::selection {
+    background: black;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* BUTTON */
+button {
+    background: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1f6391;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+/* FEATURE BOX */
+.feature-box {
+    background: #f1f1f1;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    background: #dcdcdc;
+}
+
+/* POP-UP IMAGE */
+.feature-box img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover img {
+    transform: scale(1.1) translateY(-10px);
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+/* CAT IMAGES */
+.gallery img {
+    width: 22%;
+    border-radius: 10px;
+    transition: transform 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Flexbox Demonstration</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to our Flexbox Demo</h2>
+    <p>Learn how to create flexible layouts with CSS Flexbox</p>
+    <button>Get Started</button>
+</section>
+
+<section>
+    <h2 style="text-align:center; margin-top:20px;">Our Features</h2>
+
+    <div class="features">
+
+        <div class="feature-box">
+            <img src="https://picsum.photos/300/200?random=1">
+            <h3>Responsive Design</h3>
+            <p>Flexbox makes responsive layouts simple.</p>
+        </div>
+
+        <div class="feature-box">
+            <img src="https://picsum.photos/300/200?random=2">
+            <h3>Easy Alignment</h3>
+            <p>Align items vertically and horizontally.</p>
+        </div>
+
+        <div class="feature-box">
+            <img src="https://picsum.photos/300/200?random=3">
+            <h3>Flexible Layouts</h3>
+            <p>Layouts adapt to any screen size.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 style="text-align:center;">Image Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://picsum.photos/300/200?random=3">
+        <img src="https://picsum.photos/300/200?random=3">
+        <img src="https://picsum.photos/300/200?random=3">
+        <img src="https://picsum.photos/300/200?random=3">
+    </div>
+</section>
+
+</body>
+</html>

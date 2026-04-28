@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Button Project</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align:center;
+            background: linear-gradient(135deg,#0f2027,#2c5364);
+            color:white;
+            padding:30px;
+        }
+
+        h1{
+            background:#0077b6;
+            padding:10px 20px;
+            display:inline-block;
+            border-radius:5px;
+        }
+
+        h2{
+            margin-top:40px;
+        }
+
+        p{
+            color:#ddd;
+        }
+        button{
+            padding:12px 25px;
+            margin:10px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:15px;
+            transition:0.4s;
+        }
+        .primary{background:#0077ff; color:white;}
+        .secondary{background:gray; color:white;}
+        .success{background:green; color:white;}
+        .danger{background:red; color:white;}
+
+        .primary:hover{background:#0056cc;}
+        .secondary:hover{background:#555;}
+        .success:hover{background:#006400;}
+        .danger:hover{background:#990000;}
+        .group button{
+            background:green;
+            color:white;
+        }
+
+        .group button:hover{
+            transform:scale(1.2);
+        }
+        .outline{
+            background:none;
+            border:2px solid #00c6ff;
+            color:#00c6ff;
+        }
+
+        .outline:hover{
+            background:#00c6ff;
+            color:black;
+        }
+        .gradient{
+            background: linear-gradient(45deg,#ff7e5f,#feb47b);
+            color:white;
+            box-shadow:0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .gradient:hover{
+            background: linear-gradient(45deg,#ff512f,#dd2476);
+            transform:translateY(-5px) scale(1.05);
+            box-shadow:0 10px 25px rgba(0,0,0,0.6);
+        }
+        .glass{
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(6px);
+            color:white;
+            border:1px solid rgba(255,255,255,0.3);
+        }
+
+        .glass:hover{
+            background:white;
+            color:#0077b6;
+        }
+        .shadow{
+            background:white;
+            color:black;
+        }
+
+        .shadow:hover{
+            box-shadow:0 8px 20px black;
+            transform:translateY(-3px);
+        }
+        .rounded{
+            background: linear-gradient(45deg,#667eea,#764ba2);
+            border-radius:50px;
+            color:white;
+        }
+
+        .rounded:hover{
+            transform:scale(1.1);
+            box-shadow:0 0 20px #764ba2,
+                       0 0 40px #667eea;
+            background: linear-gradient(45deg,#5f2c82,#49a09d);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Buttons Project</h1>
+
+    <p>Hover over the buttons to see effects</p>
+
+    <h2>Basic Button Styles</h2>
+
+    <button class="primary">Primary</button>
+    <button class="secondary">Secondary</button>
+    <button class="success">Success</button>
+    <button class="danger">Danger</button>
+
+    <h2>Button Group</h2>
+
+    <div class="group">
+        <button>Left</button>
+        <button>Middle</button>
+        <button>Right</button>
+    </div>
+    <h2>Modern Button Styles</h2>
+
+    <button class="outline">Outline</button>
+    <button class="gradient">Gradient</button>
+    <button class="glass">Glass</button>
+    <button class="shadow">Shadow</button>
+    <button class="rounded">Rounded</button>
+
+</body>
+</html>
