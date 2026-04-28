@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Layout Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c6aa0;
+            padding: 15px;
+        }
+
+        .section {
+            background: #ffffff;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* STATIC */
+        .static-box {
+            background: #dfe6e9;
+            padding: 10px;
+        }
+
+        /* RELATIVE */
+        .relative-box {
+            background: #81ecec;
+            padding: 10px;
+            position: relative;
+            left: 20px;
+        }
+
+        /* ABSOLUTE */
+        .parent {
+            position: relative;
+            background: #ffeaa7;
+            height: 100px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #fab1a0;
+            padding: 5px 10px;
+        }
+
+        /* FIXED */
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #dfe6e9;
+            padding: 10px;
+        }
+
+        /* FLOAT */
+        .float-container {
+            overflow: hidden;
+        }
+
+        .float-left {
+            float: left;
+            width: 45%;
+            background: #74b9ff;
+            padding: 10px;
+        }
+
+        .float-right {
+            float: right;
+            width: 45%;
+            background: #55efc4;
+            padding: 10px;
+        }
+
+        /* Z-INDEX */
+        .z-container {
+            position: relative;
+            height: 120px;
+        }
+
+        .box1 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: red;
+            z-index: 1;
+            left: 20px;
+        }
+
+        .box2 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: blue;
+            z-index: 2;
+            left: 40px;
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>CSS Day 4 – Layouts (Part 1)</h2>
+
+<div class="section">
+    <div class="label">Position: Static</div>
+    <div class="static-box">This is static position (default)</div>
+</div>
+
+<div class="section">
+    <div class="label">Position: Relative</div>
+    <div class="relative-box">This box is moved using relative position</div>
+</div>
+
+<div class="section">
+    <div class="label">Position: Absolute</div>
+    <div class="parent">
+        Parent (relative)
+        <div class="absolute-box">Absolute box</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="label">Position: Fixed</div>
+    <div>Scroll the page to see fixed position effect.</div>
+</div>
+
+<div class="section">
+    <div class="label">Float</div>
+    <div class="float-container">
+        <div class="float-left">Float Left</div>
+        <div class="float-right">Float Right</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="label">Z-index</div>
+    <div class="z-container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</div>
+
+<div class="fixed-box">Fixed Box</div>
+
+</body>
+</html>

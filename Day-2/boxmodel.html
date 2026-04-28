@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Day 3 - Box Model</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            margin: 20px;
+        }
+
+        .title {
+            text-align: center;
+            color: blue;
+        }
+
+        .section {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        /* Block vs Inline */
+        .block {
+            background: lightblue;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        .inline {
+            background: tomato;
+            color: white;
+            padding: 5px;
+        }
+
+        /* Padding */
+        .padding {
+            padding: 30px;
+            background: #e6f7ff;
+        }
+
+        /* Border */
+        .border {
+            border: 3px solid black;
+        }
+
+        /* Margin */
+        .margin {
+            background: #fff3cd;
+            margin: 30px;
+        }
+
+        /* Display */
+        .inline-box {
+            display: inline;
+            background: lightgreen;
+            padding: 10px;
+        }
+
+        .block-box {
+            display: block;
+            background: orange;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .inline-block-box {
+            display: inline-block;
+            background: skyblue;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Alignment */
+        .align {
+            text-align: center;
+        }
+
+        .center-btn {
+            padding: 10px 20px;
+            background: teal;
+            color: white;
+            border: none;
+        }
+
+        /* Image */
+        .img-style {
+            display: block;
+            margin: auto;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2 class="title">CSS Day 3 – Box Model</h2>
+
+<div class="section">
+    <h3>Block vs Inline Elements</h3>
+    <div class="block">I am block element</div>
+    <span class="inline">I am inline</span>
+</div>
+
+<div class="section padding">
+    <h3>Padding</h3>
+    <p>This section uses padding inside the element.</p>
+</div>
+
+<div class="section border">
+    <h3>Border</h3>
+    <p>This section has border around it.</p>
+</div>
+
+<div class="section margin">
+    <h3>Margin</h3>
+    <p>This section demonstrates margin spacing.</p>
+</div>
+
+<div class="section">
+    <h3>Display Property</h3>
+    <div class="inline-box">inline</div>
+    <div class="block-box">block</div>
+    <div class="inline-block-box">inline-block</div>
+</div>
+
+<div class="section align">
+    <h3>Alignment</h3>
+    <button class="center-btn">Centered Button</button>
+</div>
+
+<div class="section">
+    <h3>Image Styling</h3>
+    <img src="https://via.placeholder.com/150" class="img-style">
+</div>
+
+</body>
+</html>
