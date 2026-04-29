@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Flow</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: aqua;
+    }
+    h1{
+        background-color: aquamarine;
+        padding: 20px;
+    }
+    #output{
+        font-size: 18px;
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <h1>Control Flow</h1>
+    <p id="output">Output</p>
+
+<script>
+   
+    let marks = 75;
+    let result;
+
+    if(marks > 50){
+        console.log("pass");
+        result = "A";
+    } else {
+        console.log("fail");
+        result = "F";
+    }
+
+    
+    let money = 5;
+    let choc;
+
+    if(money >= 5){
+        choc = "Kitkat";
+    } 
+    else if(money >= 1){
+        choc = "Milkybar";
+    } 
+    else {
+        choc = "No money";
+    }
+
+    console.log(choc);
+
+   
+    let login = true;
+    let admin = false;
+    let access;
+
+    if(login){
+        if(admin){
+            access = "Admin access given";
+        } else {
+            access = "Not given by admin";
+        }
+    } else {
+        access = "Please login again";
+    }
+
+    console.log(access);
+
+  
+    let day = "tuesday";
+    let daytype;
+
+    switch(day){
+        case "sunday":
+            daytype = "Holiday";
+            break;
+        case "monday":
+            daytype = "College";
+            break;
+        case "tuesday":
+            daytype = "Leave";
+            break;
+        default:
+            daytype = "Normal day";
+    }
+
+    console.log(daytype);
+
+    let val = "  ";
+    let truth = "No value";
+
+    if(val){
+        truth = "Value is true";
+    }
+
+    console.log(truth);
+
+    // Final Output
+    document.getElementById("output").innerText =
+        "Marks: " + result +
+        " | Chocolate: " + choc +
+        " | Login: " + access +
+        " | Day: " + daytype +
+        " | Truth: " + truth;
+
+</script>
+
+</body>
+</html>

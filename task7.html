@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        background:gold ;
+        color:aliceblue;
+        text-align: center;
+    }
+    h1{
+        background-color: black;
+        color:aliceblue;
+        padding:10px;
+    }
+    #output{
+        text-align: center;
+        margin: 20px;
+        padding: 15px;
+        background-color: azure;
+        border-radius: 10px;
+        white-space: pre-line;
+        color:black;
+    }
+    </style>
+<body>
+    <h1> Loops in Js </h1>
+    <pre id="output"></pre>
+    
+</body>
+<script>
+
+    let output="";
+
+    //for
+
+   output+="for loop:\n";
+
+    for(let i=1; i <=5;i++){
+        output += "i="+i+"\n";
+    }
+    //while
+
+    output+="\nwhile loop:\n";
+    let j=6;
+        while(j<=10){
+            output +="j="+j+"\n";
+            j++
+        }
+
+        // do while
+
+        output +="\nDo-while loop:\n";
+        let k=11;
+
+        do{
+            output += "k="+k+"\n";
+            k++;
+        }
+           while(k<=16);
+
+
+
+        //for in(object keys)
+           output+="for loop:\n";
+        let obj ={
+            name: "Nandhini",age:19,school:"BS"
+        };
+        for(let key in obj){
+            output+=key+"="+obj[key]+"\n";
+        }
+        // for of value
+        output+="for of loop:\n";
+        let arr=["A","B","C"];
+
+        for(let value in arr){
+            output+=value+"\n";
+        }
+    //break and continue
+            output+="for of loop:\n";
+
+        for(let x=21; x<30;x++){
+
+            if(x==25){
+                break;
+            }
+            output+= x+"\n";
+        }
+                    output+="for of loop:\n";
+
+        for(let y=28; y<38;y++){
+
+            if(y==30){
+                continue;
+            }
+            else if(y==35){
+                continue;
+            }
+
+            output+= y+"\n";
+        }
+        //infinite
+
+        output+="\n infinity \n";
+        let z=111;
+        while(true){
+            output+=z+"\n";
+            if(z==115){
+                break;
+            }
+
+            z++;
+        }
+        // nested loops
+        output+="\nLOOP INSIDE LOOP \n";
+        outerLoop:
+        for(let i=1;i<=3;i++){
+            for(let j=1;j<=3;j++){
+                if(i==2 && j==2){
+                    break outerLoop;
+
+                }
+                output+="i="+i+",j="+j+"\n";
+            }
+        }
+
+
+
+
+
+    
+
+
+
+    document.getElementById("output").innerText= output;
+    </script>
+
+</html>

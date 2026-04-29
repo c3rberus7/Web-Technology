@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Student Analyzer</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: linear-gradient(135deg,#1e3c72,#2a5298);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        input{
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: gold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: scale(1.1);
+        }
+
+        #output{
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎯 Smart Student Analyzer</h1>
+
+<input type="number" id="marks" placeholder="Enter Marks">
+<br>
+<button onclick="analyze()">Analyze</button>
+
+<div id="output">Result will appear here...</div>
+
+<script>
+
+function analyze(){
+
+    let marks = document.getElementById("marks").value;
+    let output = "";
+
+    // ===== Operators =====
+    let bonus = 5;
+    let total = Number(marks) + bonus;   // Arithmetic
+    let isPass = total >= 50;           // Comparison
+    let grade = (total >= 75) ? "A" : "B"; // Ternary
+
+    output += "Total (with bonus): " + total + "<br>";
+    output += "Pass Status: " + isPass + "<br>";
+
+    // ===== Control Flow =====
+    if(total >= 90){
+        output += "Excellent Performance<br>";
+    } 
+    else if(total >= 50){
+        output += "Good Performance<br>";
+    } 
+    else{
+        output += "Need Improvement<br>";
+    }
+
+    // Switch
+    let day = "monday";
+    switch(day){
+        case "monday":
+            output += "Start of the week<br>";
+            break;
+        case "friday":
+            output += "Almost weekend<br>";
+            break;
+        default:
+            output += "Normal day<br>";
+    }
+
+    // ===== Loops =====
+
+    // For loop
+    output += "<br>Countdown:<br>";
+    for(let i = 3; i >= 1; i--){
+        output += i + " ";
+    }
+
+    // While loop
+    let count = 1;
+    output += "<br>While Loop:<br>";
+    while(count <= 3){
+        output += "Step " + count + "<br>";
+        count++;
+    }
+
+    // Logical Operator
+    let attendance = true;
+    if(isPass && attendance){
+        output += "Eligible for certificate<br>";
+    }
+
+    document.getElementById("output").innerHTML = output;
+}
+
+</script>
+
+</body>
+</html>

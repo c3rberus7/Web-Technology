@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    background-color: aquamarine;
+}
+h2{
+    background-color: aqua;
+    padding: 20px;
+}
+#output{
+    font-size: 18px;
+    margin: 20px;
+    color: blue;
+}
+</style>
+
+<body>
+
+<h2>JavaScript Operators</h2>
+
+<script>
+
+let a = 10, b = 5;
+let ar = "Add: " + (a+b) + ", Mul: " + (a*b);
+console.log(ar);
+
+let x = 10;
+console.log(x - 5);
+
+let com = (5 == "5");
+console.log(com);
+
+let com2 = (5 === "5");
+console.log(com2);
+
+console.log("5" + 2);
+
+let log = true && false;
+let name = true || false;
+console.log(log);
+console.log(name);
+
+let not = !true;
+console.log(not);
+
+let age = 20;
+let st = (age >= 18) ? "A" : "M";
+console.log(st);
+
+let bit = 5 & 2;
+console.log(bit);
+
+let bit2 = 5 | 2;
+console.log(bit2);
+
+let bit3 = 5 ^ 2;
+console.log(bit3);
+
+let y = 10;
+y += 5;
+console.log(y);
+
+y -= 3;
+console.log(y);
+
+y *= 2;
+console.log(y);
+
+y /= 4;
+console.log(y);
+
+console.log(typeof "Hello");
+console.log(typeof 100);
+
+let arr = [];
+console.log(arr instanceof Array);
+
+</script>
+
+</body>
+</html>
